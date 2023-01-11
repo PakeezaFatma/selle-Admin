@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js" defer></script>
+    <title>Seller Admin Page</title>
+</head>
+<body>
+    <div class="container">
+        <div class="row">
+            <h2 class="text-center text-danger">Seller Product Details</h2>
+            <form onsubmit="saveToLocalStorage(event)" class="align-content-center gap-3">
+                <label>Price</label>
+                <input id="amount" class="inputs" type="number" name="amount" required>
+                <label>Product Name</label>
+                <input class="inputs" id="pName" type="text" name="dish" required>
+                <label>Choose a Category</label>
+                <select id="category" class="inputs">
+                    <option value="Electronics">Electronics</option>
+                    <option value="FoodItems">FoodItems</option>
+                    <option value="SkinCare">SkinCare</option>
+                </select>
+                <button  class="inputs" style="height: 35px;margin-top: 10px; background-color:rgb(255, 4, 0); border:rgb(255, 4, 0); border-radius: 10px;color:#fff">Add Order Detail</button>           
+            </form>
+            <h2 class="text-center text-danger">Products</h2>
+            <ul id="listOfOrder1" class="order">Electronics</ul>
+            <ul id="listOfOrder2" class="order" >FoodItems</ul>
+            <ul id="listOfOrder3" class="order">SkinCare</ul>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/1.2.2/axios.min.js"></script>
+    </div>
+</body>
+</html>
